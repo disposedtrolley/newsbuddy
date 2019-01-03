@@ -1,0 +1,6 @@
+github.com/algorithmiaio/algorithmia-go v0.0.0-20161209193348-ddfa776535b4 h1:nECaeJVxADpf3bzcsU1uk0XfoCc/Vy5ioD/aquSVNyY=
+github.com/algorithmiaio/algorithmia-go v0.0.0-20161209193348-ddfa776535b4/go.mod h1:Bqdp9QJWcHRRYWDW7CC6HZHPlxLJiV7ajBDNJUR82AY=
+github.com/mitchellh/mapstructure v1.1.2 h1:fmNYVwqnSfB9mZU6OS2O6GsXM+wcskZDuKQzvN1EDeE=
+github.com/mitchellh/mapstructure v1.1.2/go.mod h1:FVVH3fgwuzCH5S8UJGiWEs2h04kUh9fWfEaFds41c1Y=
+golang.org/x/net v0.0.0-20181220203305-927f97764cc3 h1:eH6Eip3UpmR+yM/qI9Ijluzb1bNv/cAU/n+6l8tRSis=
+golang.org/x/net v0.0.0-20181220203305-927f97764cc3/go.mod h1:mL1N/T3taQHkDXs73rZJwtUhF3w3ftmwwsq0BUmARs4=
