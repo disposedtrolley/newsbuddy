@@ -25,7 +25,8 @@ func main() {
 
 	// Main processing loop
 	var articles []formatter.Article
-	for _, url := range urls {
+	for i, url := range urls {
+		log.Printf("[main] Processing article %d of %d\n", i+1, len(urls))
 		title, err := summariser.ArticleTitle(url)
 
 		if err != nil {
@@ -34,6 +35,8 @@ func main() {
 			articles = append(articles, formatter.Article{URL: url, Title: title, Type: "TEXT"})
 		}
 	}
+
+	log.Printf("[main] Articles processed. Assembling data required for the template...")
 
 	data := formatter.NewsletterData{
 		Title:       "iX Friday Fill-Ins",
@@ -44,9 +47,13 @@ func main() {
 
 	outStr, err := formatter.FillTemplate(data)
 
-	if err == nil {
-		w := writer.NewFileWriter(fmt.Sprintf("%s.mjml", filePath))
-
-		w.WriteToFile(outStr)
+	if err != nil {
+		log.Fatalf("[main] An error occurred when generating the template: %s\n", err.Error())
 	}
+
+	log.Printf("[main] Writing output to file...")
+
+	w := writer.NewFileWriter(fmt.Sprintf("%s.mjml", filePath))
+
+	w.WriteToFile(outStr)
 }
