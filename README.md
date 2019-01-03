@@ -9,3 +9,9 @@ The goal is to
 3. copy the contents of the HTML file to the clipboard
 
 Most of the tooling will be written in Go. Orchestration will be performed using a `Makefile`.
+
+## todo
+
+- [ ] Decide on a config file structure - this is used to define the metadata, welcome message, and links for a specific issue
+- [ ] Implement text parser for the above
+- [ ] Add `Makefile` to orchestrate template generation and invoking `mjml`
