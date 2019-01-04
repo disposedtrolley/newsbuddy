@@ -1,3 +1,5 @@
+github.com/BurntSushi/toml v0.3.1 h1:WXkYYl6Yr3qBf1K79EBnL4mak0OimBfB0XUf9Vl28OQ=
+github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/algorithmiaio/algorithmia-go v0.0.0-20161209193348-ddfa776535b4 h1:nECaeJVxADpf3bzcsU1uk0XfoCc/Vy5ioD/aquSVNyY=
 github.com/algorithmiaio/algorithmia-go v0.0.0-20161209193348-ddfa776535b4/go.mod h1:Bqdp9QJWcHRRYWDW7CC6HZHPlxLJiV7ajBDNJUR82AY=
 github.com/mitchellh/mapstructure v1.1.2 h1:fmNYVwqnSfB9mZU6OS2O6GsXM+wcskZDuKQzvN1EDeE=
