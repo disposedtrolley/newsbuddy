@@ -19,30 +19,30 @@ In May, Google demoed <a href="https://www.theverge.com/2018/5/8/17332070/google
 <br><br>
 Finally, in the last month we'll cover this week, June saw the <a href="https://techcrunch.com/2018/06/04/microsoft-promises-to-keep-github-independent-and-open/">acquisition of GitHub by Microsoft for $7.5 billion</a>, PageUp (a company that makes HR and recruitment software) <a href="https://www.zdnet.com/article/malware-hits-hr-software-firm-pageup-with-possible-data-compromise/#ftag=RSSbaffb68">announcing they were hacked</a>, with personal details likely stolen, and the <a href="https://www.macrumors.com/2018/06/27/apple-samsung-patent-dispute-settled/">end of the 7-year long Apple vs. Samsung lawsuit</a>.
 <br><br>
-Stay tuned next time for a recap of the second half of the year! In the meantime, enjoy this week's article selection, including a recipe for a delicious chocolate cheesecake.
+Stay tuned next time for a recap of the second half of the year! In the meantime, enjoy this week's article selection, including a RECIPE for a delicious chocolate cheesecake.
 """
 
 [[articles]]
 url = "https://www.gatesnotes.com/About-Bill-Gates/Year-in-Review-2018"
 type = "TEXT"
-cat = "general"
+cat = "GENERAL"
 
 [[articles]]
 url = "http://www.todayifoundout.com/index.php/2018/12/that-time-a-guy-tried-to-build-a-utopia-for-mice-and-it-all-went-to-hell/"
 type = "TEXT"
-cat = "general"
+cat = "GENERAL"
 
 [[articles]]
 url = "https://www.youtube.com/watch?v=kSLJriaOumA"
 type = "VIDEO"
-cat = "general"
+cat = "GENERAL"
 
 [[articles]]
 url = "http://www.tedinski.com/2018/03/20/wizarding-vs-engineering.html"
 type = "TEXT"
-cat = "dev"
+cat = "DEV"
 
 [[articles]]
 url = "https://www.youtube.com/watch?v=GptAgiAxDP4"
 type = "VIDEO"
-cat = "recipe"
+cat = "RECIPE"
