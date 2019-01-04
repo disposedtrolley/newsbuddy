@@ -33,6 +33,7 @@ func main() {
 		log.Printf("[main] Processing article %d of %d\n", i+1, len(source.Articles))
 
 		go func(url string, articleType string) {
+			log.Printf("[main async] Fetching title for article %s\n", url)
 			title, err := summariser.ArticleTitle(url)
 
 			if err != nil {
@@ -51,7 +52,6 @@ func main() {
 		// Once all articles have been processed, it's time to write to the
 		// template.
 		if len(articles) == len(source.Articles) {
-			fmt.Println("done!")
 			log.Printf("[main] Articles processed. Assembling data required for the template...")
 
 			data := models.NewsletterData{
