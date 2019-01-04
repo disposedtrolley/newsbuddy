@@ -8,7 +8,7 @@ import (
 )
 
 func FillTemplate(data models.NewsletterData) (string, error) {
-	t := template.Must(template.ParseFiles("./template.mjml"))
+	t := template.Must(template.ParseFiles("./newsletter.tmpl"))
 
 	buf := new(bytes.Buffer)
 

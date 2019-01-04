@@ -69,7 +69,9 @@ func main() {
 
 			log.Printf("[main] Writing output to file...")
 
-			w := writer.NewFileWriter(fmt.Sprintf("%s.mjml", filePath))
+			outFileName := fmt.Sprintf("%s.mjml", source.Metadata.PubDate)
+
+			w := writer.NewFileWriter(fmt.Sprintf(outFileName, filePath))
 
 			w.WriteToFile(outStr)
 
