@@ -71,7 +71,7 @@ func main() {
 
 			outFileName := fmt.Sprintf("%s.mjml", source.Metadata.PubDate)
 
-			w := writer.NewFileWriter(fmt.Sprintf(outFileName, filePath))
+			w := writer.NewFileWriter(outFileName)
 
 			w.WriteToFile(outStr)
 
