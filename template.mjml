@@ -66,13 +66,53 @@
       <!-- Articles -->
 			<mj-wrapper mj-class="articles">
 				{{range .Articles}}
+          {{if eq .Category "GENERAL"}}
 					<mj-section mj-class="article">
 						<mj-column>
 							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
 							<mj-text mj-class="article-summary"></mj-text>
 						</mj-column>
 					</mj-section>
-				{{end}}
+				  {{end}}
+        {{end}}
+
+        <mj-section>
+          <mj-column>
+            <mj-text>
+              <h2>Dev Basement 🤓</h2>
+            </mj-text>
+          </mj-column>
+        </mj-section>
+
+        {{range .Articles}}
+          {{if eq .Category "DEV"}}
+					<mj-section mj-class="article">
+						<mj-column>
+							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
+							<mj-text mj-class="article-summary"></mj-text>
+						</mj-column>
+					</mj-section>
+				  {{end}}
+        {{end}}
+
+        <mj-section>
+          <mj-column>
+            <mj-text>
+              <h2>Recipe of the Week 🍽</h2>
+            </mj-text>
+          </mj-column>
+        </mj-section>
+
+        {{range .Articles}}
+          {{if eq .Category "RECIPE"}}
+					<mj-section mj-class="article">
+						<mj-column>
+							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
+							<mj-text mj-class="article-summary"></mj-text>
+						</mj-column>
+					</mj-section>
+				  {{end}}
+        {{end}}
       </mj-wrapper>
 
       <!-- Footer -->

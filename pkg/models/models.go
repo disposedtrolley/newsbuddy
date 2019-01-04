@@ -1,9 +1,10 @@
 package models
 
 type Article struct {
-	URL   string `toml:"url"`
-	Title string
-	Type  string
+	URL      string
+	Title    string
+	Type     string
+	Category string
 }
 
 type NewsletterData struct {
@@ -29,5 +30,5 @@ type SourceFileMetadata struct {
 type SourceFileArticle struct {
 	Url      string `toml:"url"`
 	Type     string `toml:"type"`
-	Category string `toml:"cat`
+	Category string `toml:"cat"`
 }
