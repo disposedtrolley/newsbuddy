@@ -6,17 +6,21 @@ import (
 	"github.com/disposedtrolley/newsbuddy/pkg/models"
 	"github.com/disposedtrolley/newsbuddy/pkg/parser"
 	"github.com/disposedtrolley/newsbuddy/pkg/summariser"
+	"github.com/disposedtrolley/newsbuddy/pkg/util"
 	"github.com/disposedtrolley/newsbuddy/pkg/writer"
 	"log"
 	"os"
+	"time"
 )
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatal("No input file received. Usage: newsbuddy <input file>")
+	if len(os.Args) < 4 {
+		log.Fatal("No input file, template, or output directory received. Usage: newsbuddy <input file> <template> <output dir>")
 	}
 
 	filePath := os.Args[1]
+	templatePath := os.Args[2]
+	outDir := os.Args[3]
 
 	source, err := parser.ReadIssueSource(filePath)
 
@@ -61,19 +65,26 @@ func main() {
 				WelcomeText: source.Metadata.WelcomeText,
 				Articles:    articles}
 
-			outStr, err := formatter.FillTemplate(data)
+			outStr, err := formatter.FillTemplate(templatePath, data)
 
 			if err != nil {
 				log.Fatalf("[main] An error occurred when generating the template: %s\n", err.Error())
 			}
 
+			// Output
 			log.Printf("[main] Writing output to file...")
 
-			outFileName := fmt.Sprintf("%s.mjml", source.Metadata.PubDate)
+			formattedDate := time.Now().Local().Format("2006-01-02")
 
-			w := writer.NewFileWriter(outFileName)
+			outDir := fmt.Sprintf("%s/%s", outDir, formattedDate)
 
+			util.CreateDirIfNotExists(outDir)
+
+			// Write filled template
+			w := writer.NewFileWriter(fmt.Sprintf("%s/filled_template.mjml", outDir))
 			w.WriteToFile(outStr)
+			// Copy input source file
+			util.CopyFile(filePath, fmt.Sprintf("%s/source.toml", outDir))
 
 			return
 		}

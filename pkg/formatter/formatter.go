@@ -7,8 +7,8 @@ import (
 	"text/template"
 )
 
-func FillTemplate(data models.NewsletterData) (string, error) {
-	t := template.Must(template.ParseFiles("./newsletter.tmpl"))
+func FillTemplate(templatePath string, data models.NewsletterData) (string, error) {
+	t := template.Must(template.ParseFiles(templatePath))
 
 	buf := new(bytes.Buffer)
 
