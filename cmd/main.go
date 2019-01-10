@@ -85,6 +85,10 @@ func main() {
 			w.WriteToFile(outStr)
 			// Copy input source file
 			util.CopyFile(filePath, fmt.Sprintf("%s/source.toml", outDir))
+			// Invoke mjml binary to output an HTML file
+			util.RunExternalCommand(
+				"./mjml/node_modules/.bin/mjml",
+				[]string{fmt.Sprintf("%s/filled_template.mjml", outDir), "-o", fmt.Sprintf("%s/out.html", outDir)})
 
 			return
 		}
