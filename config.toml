@@ -1,48 +1,49 @@
 [metadata]
 title = "ix Friday Fill-Ins"
-no = 19
-date = "04 Jan 2019"
+no = 21
+date = "18 Jan 2019"
 welcome = """
-Happy New Year, 🎆 and welcome to the first issue of 2019!! Hope everyone had an awesome break (and if you're still on break, lucky you!).
-<br><br>
-It's still the early days of the new year without much happening, so I thought we should take a look back at the rollercoaster year that was...
-<br><br>
-We kicked off 2018 with the discovery of the <a href="https://www.schneier.com/blog/archives/2018/01/spectre_and_mel_1.html">Spectre and Meltdown vulnerabilities in Intel CPUs</a>, which had massive repercussions not just for PCs at home and work, but for cloud providers like AWS, Google, and IBM who scrambled to patch their hardware. In the same month, a <a href="https://thesizzle.us11.list-manage.com/track/click?u=62528f73daee6def1defe44e0&id=1513a2ec39&e=f061c38e01">false alarm</a> was sent to residents of Hawaii warning of an incoming ballistic missile, <a href="https://money.cnn.com/2018/01/18/technology/tide-pod-challenge-video-youtube-facebook/index.html">laundry detergent became a favourite snack</a> and Amazon opened their first <a href="https://www.nytimes.com/2018/01/21/technology/inside-amazon-go-a-store-of-the-future.html">checkout-less supermarket</a>.
-<br><br>
-In Feb, Elon Musk <a href="https://en.wikipedia.org/wiki/Elon_Musk%27s_Tesla_Roadster">launched his old Tesla Roadster into space</a> after which he seemed to embark on a slow but steady decline, and us Australians finally got a taste of instant inter-bank transfers, with the launch of the <a href="https://www.itnews.com.au/news/australias-new-payments-platform-goes-live-485045">New Payments Platform</a>.
-<br><br>
-March saw the unveiling of <a href="https://www.theguardian.com/news/2018/mar/17/data-war-whistleblower-christopher-wylie-faceook-nix-bannon-trump">Cambridge Analytica's abuse of Facebook data</a> to rig the U.S. election, and Facebook's subsequent denial of anything and everything. We also unfortunately witnessed the <a href="https://www.theguardian.com/technology/2018/mar/19/uber-self-driving-car-kills-woman-arizona-tempe">first fatal autonomous car accident involving a pedestrian</a>, when a self-driving Uber ran down a woman in Arizona.
-<br><br>
-Mid-autumn brought a <a href="https://www.theverge.com/2018/4/12/17227974/google-gmail-design-features-update-2018-redesign">re-design of Gmail</a> met with mixed opinion (I like it and think it's about time).
-<br><br>
-In May, Google demoed <a href="https://www.theverge.com/2018/5/8/17332070/google-assistant-makes-phone-call-demo-duplex-io-2018">Duplex</a>, an "AI" assistant that can make appointments for you over the phone.
-<br><br>
-Finally, in the last month we'll cover this week, June saw the <a href="https://techcrunch.com/2018/06/04/microsoft-promises-to-keep-github-independent-and-open/">acquisition of GitHub by Microsoft for $7.5 billion</a>, PageUp (a company that makes HR and recruitment software) <a href="https://www.zdnet.com/article/malware-hits-hr-software-firm-pageup-with-possible-data-compromise/#ftag=RSSbaffb68">announcing they were hacked</a>, with personal details likely stolen, and the <a href="https://www.macrumors.com/2018/06/27/apple-samsung-patent-dispute-settled/">end of the 7-year long Apple vs. Samsung lawsuit</a>.
-<br><br>
-Stay tuned next time for a recap of the second half of the year! In the meantime, enjoy this week's article selection, including a RECIPE for a delicious chocolate cheesecake.
+
 """
 
 [[articles]]
-url = "https://www.gatesnotes.com/About-Bill-Gates/Year-in-Review-2018"
-type = "TEXT"
-cat = "GENERAL"
-
-[[articles]]
-url = "http://www.todayifoundout.com/index.php/2018/12/that-time-a-guy-tried-to-build-a-utopia-for-mice-and-it-all-went-to-hell/"
-type = "TEXT"
-cat = "GENERAL"
-
-[[articles]]
-url = "https://www.youtube.com/watch?v=kSLJriaOumA"
+url = "https://vimeo.com/36579366"
 type = "VIDEO"
 cat = "GENERAL"
+summary = ""
 
 [[articles]]
-url = "http://www.tedinski.com/2018/03/20/wizarding-vs-engineering.html"
+url = "http://www.technovelgy.com/ct/content.asp?Bnum=1024"
+type = "TEXT"
+cat = "GENERAL"
+summary = "A vision for e-books from almost 60 years ago!"
+
+[[articles]]
+url = "http://norvig.com/21-days.html"
 type = "TEXT"
 cat = "DEV"
+summary = ""
 
 [[articles]]
-url = "https://www.youtube.com/watch?v=GptAgiAxDP4"
+url = "http://blogs.dropbox.com/tech/2019/01/courier-dropbox-migration-to-grpc/"
+type = "TEXT"
+cat = "DEV"
+summary = ""
+
+[[articles]]
+url = "https://scottbot.net/the-route-of-a-text-message/"
+type = "TEXT"
+cat = "GENERAL"
+summary = ""
+
+[[articles]]
+url = "https://www.youtube.com/watch?v=p0jGmgIrf_M"
 type = "VIDEO"
+cat = "DEV"
+summary = ""
+
+[[articles]]
+url = "https://www.justonecookbook.com/ginger-rice/"
+type = "TEXT"
 cat = "RECIPE"
+summary = ""

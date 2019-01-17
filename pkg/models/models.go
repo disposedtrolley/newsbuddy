@@ -1,11 +1,11 @@
 package models
 
 type Article struct {
-	URL      string
+	URL      string `toml:"url"`
 	Title    string
-	Type     string
-	Category string
-	Summary  string
+	Type     string `toml:"type"`
+	Category string `toml:"cat"`
+	Summary  string `toml:"summary"`
 }
 
 type NewsletterData struct {
@@ -17,8 +17,8 @@ type NewsletterData struct {
 }
 
 type SourceFile struct {
-	Metadata SourceFileMetadata  `toml:"metadata"`
-	Articles []SourceFileArticle `toml:"articles"`
+	Metadata SourceFileMetadata `toml:"metadata"`
+	Articles []Article          `toml:"articles"`
 }
 
 type SourceFileMetadata struct {
@@ -26,11 +26,4 @@ type SourceFileMetadata struct {
 	IssueNo     int    `toml:"no"`
 	PubDate     string `toml:"date"`
 	WelcomeText string `toml:"welcome"`
-}
-
-type SourceFileArticle struct {
-	Url      string `toml:"url"`
-	Type     string `toml:"type"`
-	Category string `toml:"cat"`
-	Summary  string `toml:"summary"`
 }
