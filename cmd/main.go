@@ -33,19 +33,20 @@ func main() {
 	ch := make(chan *models.Article, len(source.Articles))
 
 	for i, article := range source.Articles {
-		url := article.Url
 		log.Printf("[main] Processing article %d of %d\n", i+1, len(source.Articles))
 
-		go func(url string, articleType string, category string, summary string) {
-			log.Printf("[main async] Fetching title for article %s\n", url)
-			title, err := summariser.ArticleTitle(url)
+		go func(article models.Article) {
+			log.Printf("[main async] Fetching title for article %s\n", article.URL)
+			title, err := summariser.ArticleTitle(article.URL)
 
 			if err != nil {
 				fmt.Println(err)
 			}
 
-			ch <- &models.Article{URL: url, Title: title, Type: articleType, Category: category, Summary: summary}
-		}(url, article.Type, article.Category, article.Summary)
+			article.Title = title
+
+			ch <- &article
+		}(article)
 	}
 
 	// Iterate through the buffered channel and append processed articles
