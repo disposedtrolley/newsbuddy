@@ -69,7 +69,7 @@
           {{if eq .Category "GENERAL"}}
 					<mj-section mj-class="article">
 						<mj-column>
-							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
+							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
 							<mj-text mj-class="article-summary"></mj-text>
 						</mj-column>
 					</mj-section>
@@ -88,7 +88,7 @@
           {{if eq .Category "DEV"}}
 					<mj-section mj-class="article">
 						<mj-column>
-							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
+							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
 							<mj-text mj-class="article-summary"></mj-text>
 						</mj-column>
 					</mj-section>
@@ -107,7 +107,7 @@
           {{if eq .Category "RECIPE"}}
 					<mj-section mj-class="article">
 						<mj-column>
-							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}</a></mj-text>
+							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
 							<mj-text mj-class="article-summary"></mj-text>
 						</mj-column>
 					</mj-section>
