@@ -36,7 +36,7 @@ func main() {
 		url := article.Url
 		log.Printf("[main] Processing article %d of %d\n", i+1, len(source.Articles))
 
-		go func(url string, articleType string, category string) {
+		go func(url string, articleType string, category string, summary string) {
 			log.Printf("[main async] Fetching title for article %s\n", url)
 			title, err := summariser.ArticleTitle(url)
 
@@ -44,8 +44,8 @@ func main() {
 				fmt.Println(err)
 			}
 
-			ch <- &models.Article{URL: url, Title: title, Type: articleType, Category: category}
-		}(url, article.Type, article.Category)
+			ch <- &models.Article{URL: url, Title: title, Type: articleType, Category: category, Summary: summary}
+		}(url, article.Type, article.Category, article.Summary)
 	}
 
 	// Iterate through the buffered channel and append processed articles

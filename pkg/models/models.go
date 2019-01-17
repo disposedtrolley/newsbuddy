@@ -5,6 +5,7 @@ type Article struct {
 	Title    string
 	Type     string
 	Category string
+	Summary  string
 }
 
 type NewsletterData struct {
@@ -31,4 +32,5 @@ type SourceFileArticle struct {
 	Url      string `toml:"url"`
 	Type     string `toml:"type"`
 	Category string `toml:"cat"`
+	Summary  string `toml:"summary"`
 }
