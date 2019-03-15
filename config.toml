@@ -1,49 +1,40 @@
 [metadata]
-title = "ix Friday Fill-Ins"
-no = 21
-date = "18 Jan 2019"
+title = "iX Friday Fill-Ins"
+no = 28
+date = "15 Mar 2019"
 welcome = """
 
 """
-
 [[articles]]
-url = "https://vimeo.com/36579366"
-type = "VIDEO"
-cat = "GENERAL"
-summary = ""
-
-[[articles]]
-url = "http://www.technovelgy.com/ct/content.asp?Bnum=1024"
-type = "TEXT"
-cat = "GENERAL"
-summary = "A vision for e-books from almost 60 years ago!"
-
-[[articles]]
-url = "http://norvig.com/21-days.html"
-type = "TEXT"
-cat = "DEV"
-summary = ""
-
-[[articles]]
-url = "http://blogs.dropbox.com/tech/2019/01/courier-dropbox-migration-to-grpc/"
-type = "TEXT"
-cat = "DEV"
-summary = ""
-
-[[articles]]
-url = "https://scottbot.net/the-route-of-a-text-message/"
+url = "https://www.newyorker.com/science/elements/the-software-that-shapes-workers-lives"
 type = "TEXT"
 cat = "GENERAL"
 summary = ""
 
 [[articles]]
-url = "https://www.youtube.com/watch?v=p0jGmgIrf_M"
-type = "VIDEO"
+url = "https://roadsandkingdoms.com/travel-guide/tokyo/a-history-of-tokyo-in-8-dishes/"
+type = "TEXT"
+cat = "GENERAL"
+summary = ""
+
+[[articles]]
+url = "http://www.internalpointers.com/post/gentle-introduction-multithreading"
+type = "TEXT"
 cat = "DEV"
 summary = ""
 
 [[articles]]
-url = "https://www.justonecookbook.com/ginger-rice/"
+url = "https://ethanmarcotte.com/wrote/the-web-we-broke/"
 type = "TEXT"
-cat = "RECIPE"
+cat = "GENERAL"
 summary = ""
+
+[[articles]]
+url = "https://arstechnica.com/information-technology/2019/03/faa-acting-chief-says-satellite-data-provided-link-between-boeing-crashes/"
+type = "TEXT"
+cat = "GENERAL"
+summary = ""
+
+[[images]]
+path = "./image.png"
+alt = "A poster stuck to a wall saying 'In case of fire: 1) git commit, 2) git push, 3) leave building'"

@@ -17,6 +17,7 @@
       <mj-class name="category-heading" font-family="monospace" font-weight="600" font-size="18pt" />
 
       <mj-class name="articles" padding="0 10px 0 10px" />
+      <mj-class name="images" padding="0 10px 20px 10px" />
 
       <mj-class name="footer" padding="10px 10px 10px 10px" />
 
@@ -63,13 +64,26 @@
         </mj-column>
       </mj-section>
 
+      <!-- Images -->
+      <mj-section mj-class="images">
+        <mj-column>
+          {{range .Images}}
+          <mj-image width="{{.Width}}px" src="{{.URL}}" alt="{{.AltText}}"/>
+          {{end}}
+        </mj-column>
+      </mj-section>
+
       <!-- Articles -->
 			<mj-wrapper mj-class="articles">
 				{{range .Articles}}
           {{if eq .Category "GENERAL"}}
 					<mj-section mj-class="article">
 						<mj-column>
-							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
+							{{if eq .Type "TEXT"}}
+              <mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
+              {{else if eq .Type "IMAGE"}}
+              <mj-image width="500px" src="{{.URL}}" />
+              {{end}}
 							<mj-text mj-class="article-summary">{{.Summary}}</mj-text>
 						</mj-column>
 					</mj-section>
@@ -88,7 +102,11 @@
           {{if eq .Category "DEV"}}
 					<mj-section mj-class="article">
 						<mj-column>
-							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
+							{{if eq .Type "TEXT"}}
+              <mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
+              {{else if eq .Type "IMAGE"}}
+              <mj-image width="500px" src="{{.URL}}" />
+              {{end}}
 							<mj-text mj-class="article-summary">{{.Summary}}</mj-text>
 						</mj-column>
 					</mj-section>
@@ -107,7 +125,11 @@
           {{if eq .Category "RECIPE"}}
 					<mj-section mj-class="article">
 						<mj-column>
+              {{if eq .Type "TEXT"}}
 							<mj-text mj-class="article-title"><a href="{{.URL}}">{{.Title}}{{if eq .Type "VIDEO"}} [video] {{end}}</a></mj-text>
+              {{else if eq .Type "IMAGE"}}
+              <mj-image width="500px" src="{{.URL}}" />
+              {{end}}
 							<mj-text mj-class="article-summary">{{.Summary}}</mj-text>
 						</mj-column>
 					</mj-section>
