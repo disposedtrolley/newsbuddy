@@ -17,6 +17,7 @@
       <mj-class name="category-heading" font-family="monospace" font-weight="600" font-size="18pt" />
 
       <mj-class name="articles" padding="0 10px 0 10px" />
+      <mj-class name="images" padding="0 10px 20px 10px" />
 
       <mj-class name="footer" padding="10px 10px 10px 10px" />
 
@@ -60,6 +61,15 @@
           <mj-text>
             {{.WelcomeText}}
           </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Images -->
+      <mj-section mj-class="images">
+        <mj-column>
+          {{range .Images}}
+          <mj-image width="{{.Width}}px" src="{{.URL}}" alt="{{.AltText}}"/>
+          {{end}}
         </mj-column>
       </mj-section>
 
